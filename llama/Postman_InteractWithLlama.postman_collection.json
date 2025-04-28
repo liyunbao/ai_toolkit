@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "f5738b8a-fe80-4d17-b3f7-ec21d9b483a1",
+		"name": "Postman_InteractWithLlama",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40473070"
+	},
+	"item": [
+		{
+			"name": "call_llama3.2_system_user_roles",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"model\": \"llama3.2:latest\",\r\n  \"prompt\": \"System: You are a experienced elementary teacher and explain the scientific questions to the young kids in fun and easy to understand way.\\nUser: What is Large Language Model?\",\r\n  \"stream\": false\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:11434/api/generate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "11434",
+					"path": [
+						"api",
+						"generate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "call_llama3.2_basic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"model\": \"llama3.2:latest\",\r\n  \"prompt\": \"Explain LLM to a 5 year old kid\",\r\n  \"stream\": false\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:11434/api/generate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "11434",
+					"path": [
+						"api",
+						"generate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
